@@ -1,0 +1,99 @@
+As a Swarm Architect, I'll design the RAW XML for activity_sovereign_call.x[25D[K
+activity_sovereign_call.xml. Here is the code:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<activity android:name=".SovereignCallActivity"
+    android:theme="@style/SovereignTheme">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android[57D[K
+xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!-- Navy blue background -->
+        <View
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#032B44" />
+        <!-- Header with gold-etched title -->
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFD700" />
+        </LinearLayout>
+        <!-- P2P video container -->
+        <FrameLayout
+            android:id="@+id/video_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <!-- Video view -->
+            <SurfaceView
+                android:id="@+id/surface_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+        <!-- Fibonacci pulse visualizer container -->
+        <LinearLayout
+            android:id="@+id/pulse_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!-- Pulse view -->
+            <View
+                android:id="@+id/pulse_view"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+        </LinearLayout>
+    </LinearLayout>
+</activity>
+```
+
+And here is the corresponding style for `SovereignTheme`:
+
+```xml
+<style name="SovereignTheme">
+    <item name="android:windowBackground">@null</item>
+    <item name="android:windowIsTranslucent">true</item>
+    <item name="android:textColor">#FFD700</item>
+    <item name="android:statusBarColor">#032B44</item>
+    <item name="android:navigationBarColor">#032B44</item>
+</style>
+```
+
+And here is the XML for `fibonacci_pulse.xml` which will be used to visuali[7D[K
+visualize the Fibonacci sequence:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/item1">
+        <shape android:shape="oval">
+            <size android:width="20dp" android:height="20dp" />
+            <solid android:color="#FFD700" />
+        </shape>
+    </item>
+    <item android:id="@+id/item2"
+        android:left="30dp"
+        android:top="50dp">
+        <shape android:shape="oval">
+            <size android:width="40dp" android:height="20dp" />
+            <solid android:color="#FFD700" />
+        </shape>
+    </item>
+    <!-- ... -->
+</layer-list>
+```
+
+Note that this is a basic implementation and may need to be adjusted based [K
+on the specific requirements of your project.
+

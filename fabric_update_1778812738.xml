@@ -1,0 +1,47 @@
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<activity_sovereign_call>
+  <layout>
+    <LinearLayout
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      android:id="@+id/container"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+      <!-- Background -->
+      <View
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#03055B" />
+      <!-- Gold Etched Calling Interface -->
+      <LinearLayout
+        android:id="@+id/calling_interface"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:orientation="vertical">
+        <!-- Caller's Video Container -->
+        <FrameLayout
+          android:id="@+id/caller_video_container"
+          android:layout_width="match_parent"
+          android:layout_height="200dp">
+          <!-- P2P Video Surface -->
+          <SurfaceView
+            android:id="@+id/caller_surface_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        </FrameLayout>
+        <!-- Fibonacci Pulse Visualizer -->
+        <com.example.FibonacciPulseVisualizer
+          android:id="@+id/fibonacci_pulse_visualizer"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_horizontal" />
+      </LinearLayout>
+    </LinearLayout>
+  </layout>
+</activity_sovereign_call>
+```
+
